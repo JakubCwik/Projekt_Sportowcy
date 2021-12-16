@@ -23,7 +23,7 @@ namespace Projekt
                 }
             }
         }
-
+//Siema
         private string _Nazwisko { get; set; }
 
         public string Nazwisko
