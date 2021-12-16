@@ -23,7 +23,6 @@ namespace Projekt
                 }
             }
         }
-//Siema
         private string _Nazwisko { get; set; }
 
         public string Nazwisko
@@ -78,5 +77,4 @@ namespace Projekt
         }
     }
 }
-//kkk
-//kojhnkh
+
