@@ -1,0 +1,25 @@
+﻿<Window x:Class="Projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="Sławni sportowcy" Height="450" Width="800">
+    <Grid>
+        <ListView Margin="10,10,10,59" Name="lv_dane" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Imie" Width="200" DisplayMemberBinding="{Binding Imie}" />
+                    <GridViewColumn Header="Nazwisko" Width="200" DisplayMemberBinding="{Binding Nazwisko}" />
+                    <GridViewColumn Header="Rodzaj sportu" Width="200" DisplayMemberBinding="{Binding RodzajSportu}" />
+                    <GridViewColumn Header="Wiek" Width="200" DisplayMemberBinding="{Binding Wiek}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Dodaj pozycję"  Margin="655,380,10,10" Click="Button_Click_Dodaj"/>
+        <Button Content="Edytuj pozycję" Click="Button_Click_Edytuj" Margin="489,380,166,10"/>
+        <Button Content="Usuń pozycję" Click="Button_Click_Usun" Margin="337,380,337,10" />
+        <Button Content="Zapisz listę" Click="Button_Click_Zapis" Margin="193,380,478,10" />
+    </Grid>
+</Window>

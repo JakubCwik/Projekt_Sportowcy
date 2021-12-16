@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfOsoba xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Osoba>
+    <Imie>dth</Imie>
+    <Nazwisko>tdhs</Nazwisko>
+    <RodzajSportu>jjjjjjjj</RodzajSportu>
+    <Wiek>44</Wiek>
+  </Osoba>
+  <Osoba>
+    <Imie>stahahtr</Imie>
+    <Nazwisko>htsh</Nazwisko>
+    <RodzajSportu>tfghtfdh</RodzajSportu>
+    <Wiek>696969696</Wiek>
+  </Osoba>
+</ArrayOfOsoba>

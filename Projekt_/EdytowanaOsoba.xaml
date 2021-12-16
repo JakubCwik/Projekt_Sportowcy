@@ -1,0 +1,38 @@
+﻿<Window x:Class="Projekt.EdytowanaOsoba"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="Edytowanie sportowców" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Imię:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
+        <TextBox Name="imie" Width="200" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Imie, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="Nazwisko:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
+        <TextBox Name="nazwisko" Width="200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Nazwisko, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="Rodzaj sportu:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
+        <TextBox Name="rodzaj_sportu" Width="200" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="5" Text="{Binding RodzajSportu, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBlock Text="Wiek:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
+        <TextBox Name="wiek" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Margin="5" Width="100" Text="{Binding Wiek, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="4" Grid.Column="0" Margin="10" Width="100"
+                Click="ButtonZapisz_Click"/>
+    </Grid>
+</Window>
