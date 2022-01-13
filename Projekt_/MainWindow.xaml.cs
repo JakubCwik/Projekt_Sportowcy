@@ -57,6 +57,10 @@ namespace Projekt
                 osoba.Nazwisko = (string)row["nazwisko"];
                 osoba.RodzajSportu = (string)row["Rodzaj_Sportu"];
                 osoba.Wiek = (int)row["Wiek"];
+                osoba.Pozycja = (pozycja) row["Pozycja"];
+
+
+
                 osobaa.Add(osoba);
             }
             lv_dane.ItemsSource = osobaa;

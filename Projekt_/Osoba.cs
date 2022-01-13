@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
+    public enum pozycja { Bramkarz, Napastnik, Pomocnik, Obrońca};
     public class Osoba : INotifyPropertyChanged
     {
         private string _Imie;
@@ -67,6 +68,21 @@ namespace Projekt
                 }
             }
         }
+
+        private pozycja _Pozycja { get; set; }
+        public pozycja Pozycja
+        {
+            get { return this._Pozycja; }
+            set
+            {
+                if (this._Pozycja != value)
+                {
+                    this._Pozycja = value;
+                    this.NotifyPropertyChanged("Pozycja");
+                }
+            }
+        }
+                    
 
         public event PropertyChangedEventHandler PropertyChanged;
 

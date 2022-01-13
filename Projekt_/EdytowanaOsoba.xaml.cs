@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,13 @@ namespace Projekt
         private MainWindow MainWindow;
         public EdytowanaOsoba(MainWindow window)
         {
+
             this.MainWindow = window;
             InitializeComponent();
+
+            pozycja.ItemsSource = Enum.GetValues(typeof(pozycja)).Cast<pozycja>();
             this.DataContext = MainWindow.EdytowanaOsoba;
+
         }
 
         private void ButtonZapisz_Click(object sender, RoutedEventArgs e)
