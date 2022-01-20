@@ -34,5 +34,10 @@ namespace Projekt
         {
             this.Close();
         }
+
+        private void Pozycja_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

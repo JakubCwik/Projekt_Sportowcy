@@ -57,7 +57,8 @@ namespace Projekt
                 osoba.Nazwisko = (string)row["nazwisko"];
                 osoba.RodzajSportu = (string)row["Rodzaj_Sportu"];
                 osoba.Wiek = (int)row["Wiek"];
-                osoba.Pozycja = (pozycja) row["Pozycja"];
+                string poz = (string)row["Pozycja"];
+                osoba.Pozycja = (pozycja) Enum.Parse(typeof(pozycja), poz, true);
 
 
 

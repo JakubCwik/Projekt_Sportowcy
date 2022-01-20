@@ -34,7 +34,7 @@
         <TextBox Name="wiek" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Margin="5" Width="100" Text="{Binding Wiek, UpdateSourceTrigger=PropertyChanged}"/>
 
         <TextBlock Text="Pozycja:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <ComboBox Name="pozycja" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5" Width="100" Text="{Binding Pozycja, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox Name="pozycja" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5" Width="100" Text="{Binding Pozycja, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="Pozycja_SelectionChanged"/>
 
         <Button Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="5" Grid.Column="0" Margin="10" Width="100"
                 Click="ButtonZapisz_Click"/>
