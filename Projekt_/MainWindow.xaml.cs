@@ -33,10 +33,10 @@ namespace Projekt
             InitializeComponent();
             //M12\SQLEXPRESS
 
-            string connectionString = "Server= localhost\\SQLEXPRESS; Database= Baza_Danych; Integrated Security = SSPI";
+            string connectionString = "Server= LAPTOP-TG9368EE; Database= Baza_Danych; Integrated Security = SSPI";
             SqlConnection connection = new SqlConnection(connectionString);
 
-            SqlCommand command = new SqlCommand("selectSportowcy", connection);
+            SqlCommand command = new SqlCommand("Baza", connection);
             command.CommandType = CommandType.StoredProcedure;
 
             SqlDataAdapter sda = new SqlDataAdapter(command);
@@ -57,7 +57,7 @@ namespace Projekt
                 osoba.Nazwisko = (string)row["nazwisko"];
                 osoba.RodzajSportu = (string)row["Rodzaj_Sportu"];
                 osoba.Wiek = (int)row["Wiek"];
-                osoba.Pozycja = (pozycja) row["Pozycja"];
+                //osoba.Pozycja = (pozycja) row["Pozycja"];
 
 
 
