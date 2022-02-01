@@ -28,15 +28,35 @@
         <TextBox Name="nazwisko" Width="200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Nazwisko, UpdateSourceTrigger=PropertyChanged}"/>
 
         <TextBlock Text="Rodzaj sportu:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="rodzaj_sportu" Width="200" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="5" Text="{Binding RodzajSportu, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox Name="rodzaj_sportu" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" Margin="5,0,0,5" Width="100" Text="{Binding RodzajSportu, UpdateSourceTrigger=PropertyChanged}" >
+            <ComboBoxItem>Piłka nożna</ComboBoxItem>
+            <ComboBoxItem>Siatkówka</ComboBoxItem>
+            <ComboBoxItem>Koszykówka</ComboBoxItem>
+
+        </ComboBox>
 
         <TextBlock Text="Wiek:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
         <TextBox Name="wiek" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Margin="5" Width="100" Text="{Binding Wiek, UpdateSourceTrigger=PropertyChanged}"/>
 
         <TextBlock Text="Pozycja:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <ComboBox Name="pozycja" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5" Width="100" Text="{Binding Pozycja, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox Name="pozycja" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5" Width="100" Text="{Binding Pozycja, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="Pozycja_SelectionChanged">
+            <ComboBoxItem>Bramkarz</ComboBoxItem>
+            <ComboBoxItem>Napasnik</ComboBoxItem>
+            <ComboBoxItem>Obrońca</ComboBoxItem>
+            <ComboBoxItem>Pomocnik</ComboBoxItem>
 
-        <Button Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="5" Grid.Column="0" Margin="10" Width="100"
+            <ComboBoxItem>Atakujący</ComboBoxItem>
+            <ComboBoxItem>Rozgrywający</ComboBoxItem>
+            <ComboBoxItem>Środkowy</ComboBoxItem>
+            <ComboBoxItem>Przyjmujący</ComboBoxItem>
+            <ComboBoxItem>Libero</ComboBoxItem>
+
+            <ComboBoxItem>Rzucający</ComboBoxItem>
+            <ComboBoxItem>Skrzydłowy</ComboBoxItem>
+
+        </ComboBox>
+
+        <Button Name="edytuj_button" Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="5" Grid.Column="0" Margin="10" Width="100"
                 Click="ButtonZapisz_Click"/>
     </Grid>
 </Window>

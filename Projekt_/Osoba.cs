@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    public enum pozycja { Bramkarz, Napastnik, Pomocnik, Obrońca};
+    //public enum pozycja { Bramkarz, Napastnik, Pomocnik, Obrońca};
     public class Osoba : INotifyPropertyChanged
     {
         private string _Imie;
@@ -69,8 +69,24 @@ namespace Projekt
             }
         }
 
-        private pozycja _Pozycja { get; set; }
-        public pozycja Pozycja
+        private int _ID;
+
+        public int ID
+        {
+            get { return this._ID; }
+            set
+            {
+                if(this._ID!=value)
+                {
+                    this._ID = value;
+                    this.NotifyPropertyChanged("ID");
+                }
+            }
+        }
+
+        private string _Pozycja;
+
+        public string Pozycja
         {
             get { return this._Pozycja; }
             set
@@ -78,11 +94,25 @@ namespace Projekt
                 if (this._Pozycja != value)
                 {
                     this._Pozycja = value;
-                    this.NotifyPropertyChanged("Pozycja");
+                    this.NotifyPropertyChanged("Pozcyja");
                 }
             }
         }
-                    
+
+        //private pozycja _Pozycja { get; set; }
+        //public pozycja Pozycja
+        //{
+        //    get { return this._Pozycja; }
+        //    set
+        //    {
+        //        if (this._Pozycja != value)
+        //        {
+        //            this._Pozycja = value;
+        //            this.NotifyPropertyChanged("Pozycja");
+        //        }
+        //    }
+        //}
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -22,21 +22,42 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Imię:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="imie" Width="200" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Imie}"/>
+        <TextBox Name="imie_txt" Width="200" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Imie}"/>
 
         <TextBlock Text="Nazwisko:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="nazwisko" Width="200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Nazwisko}"/>
+        <TextBox Name="nazwisko_txt" Width="200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="5" Text="{Binding Nazwisko}"/>
 
         <TextBlock Text="Rodzaj sportu:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="rodzaj_sportu" Width="200" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" Margin="5" Text="{Binding RodzajSportu}"/>
+        
+        <ComboBox Name="rodzaj_sportu_txt" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" Margin="5,0,0,5" Width="100" Text="{Binding RodzajSportu, UpdateSourceTrigger=PropertyChanged}" >
+            <ComboBoxItem>Piłka nożna</ComboBoxItem>
+            <ComboBoxItem>Siatkówka</ComboBoxItem>
+            <ComboBoxItem>Koszykówka</ComboBoxItem>
+           
+        </ComboBox>
 
         <TextBlock Text="Wiek:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="wiek" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Margin="5" Width="100" Text="{Binding Wiek}"/>
+        <TextBox Name="wiek_txt" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Margin="5" Width="100" Text="{Binding Wiek}"/>
 
         <TextBlock Text="Pozycja:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Name="pozycja" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5" Width="100" Text="{Binding Pozycja}"/>
 
-        <Button Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="5" Grid.Column="0" Margin="10" Width="100"
+        <ComboBox Name="pozycja_txt" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Margin="5,0,0,5" Width="100" Text="{Binding Pozycja, UpdateSourceTrigger=PropertyChanged}" SelectionChanged="pozycja_SelectionChanged">
+            <ComboBoxItem>Bramkarz</ComboBoxItem>
+            <ComboBoxItem>Napasnik</ComboBoxItem>
+            <ComboBoxItem>Obrońca</ComboBoxItem>
+            <ComboBoxItem>Pomocnik</ComboBoxItem>
+
+            <ComboBoxItem>Atakujący</ComboBoxItem>
+            <ComboBoxItem>Rozgrywający</ComboBoxItem>
+            <ComboBoxItem>Środkowy</ComboBoxItem>
+            <ComboBoxItem>Przyjmujący</ComboBoxItem>
+            <ComboBoxItem>Libero</ComboBoxItem>
+
+            <ComboBoxItem>Rzucający</ComboBoxItem>
+            <ComboBoxItem>Skrzydłowy</ComboBoxItem>
+        </ComboBox>
+
+        <Button Name="dodaj" Grid.ColumnSpan="2" Content="Zapisz" Grid.Row="5" Grid.Column="0" Margin="10" Width="100"
                 Click="ButtonZapisz_Click"/>
 
     </Grid>

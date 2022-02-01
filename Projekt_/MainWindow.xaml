@@ -14,22 +14,26 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>-->
-       
+
         <ListView Margin="10,10,10,59" Name="lv_dane" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" >
 
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Imie" Width="200" DisplayMemberBinding="{Binding Imie}" />
-                    <GridViewColumn Header="Nazwisko" Width="200" DisplayMemberBinding="{Binding Nazwisko}" />
-                    <GridViewColumn Header="Rodzaj sportu" Width="200" DisplayMemberBinding="{Binding RodzajSportu}" />
-                    <GridViewColumn Header="Wiek" Width="200" DisplayMemberBinding="{Binding Wiek}" />
-                    <GridViewColumn Header="Pozycja" Width="200" DisplayMemberBinding="{Binding Pozycja}" />
+                    <GridViewColumn x:Name="ID_txt" Header="ID" Width="150" DisplayMemberBinding="{Binding ID}" />
+                    <GridViewColumn x:Name="Imie_txt" Header="Imie" Width="150" DisplayMemberBinding="{Binding Imie}" />
+                    <GridViewColumn x:Name="Nazwisko_txt" Header="Nazwisko" Width="150" DisplayMemberBinding="{Binding Nazwisko}" />
+                    <GridViewColumn x:Name="Rodzaj_Sportu_txt" Header="Rodzaj sportu" Width="150" DisplayMemberBinding="{Binding RodzajSportu}" />
+                    <GridViewColumn x:Name="Wiek_txt" Header="Wiek" Width="150" DisplayMemberBinding="{Binding Wiek}" />
+                    <GridViewColumn x:Name="Pozycja_txt" Header="Pozycja" Width="150" DisplayMemberBinding="{Binding Pozycja}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj"  Margin="888,380,0,10" Click="Button_Click_Dodaj" HorizontalAlignment="Left" Width="127" />
+        <Button Name="Raport" Content="Raport" Margin="196,380,688,10" Click="Raport_Click"></Button>
+        <Button Name="dodaj_button" Content="Dodaj"  Margin="888,380,0,10" Click="Button_Click_Dodaj" HorizontalAlignment="Left" Width="127" />
         <Button Content="Edytuj" Click="Button_Click_Edytuj" Margin="724,380,0,10" HorizontalAlignment="Left" Width="137"/>
-        <Button Content="Usuń" Click="Button_Click_Usun" Margin="586,380,0,10" HorizontalAlignment="Left" Width="118" />
+        <Button Name="usun_button" Content="Usuń" Click="Button_Click_Usun" Margin="586,380,0,10" HorizontalAlignment="Left" Width="118" />
         <Button Content="Zapisz listę" Click="Button_Click_Zapis" Margin="444,380,0,10" HorizontalAlignment="Left" Width="121" />
+       
     </Grid>
+    
 </Window>
